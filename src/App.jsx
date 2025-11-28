@@ -1,4 +1,3 @@
-// src/App.jsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -8,13 +7,9 @@ import "./App.css";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/frontend">
+    <BrowserRouter>  {/* 👈 NO basename here */}
       <div className="app-shell">
-        <header className="app-header">
-          <div className="app-logo">TaskFlow</div>
-          <div className="app-header-accent" />
-        </header>
-
+        {/* header / layout etc */}
         <main className="app-main">
           <div className="app-main-inner">
             <Routes>
@@ -26,10 +21,6 @@ export default function App() {
             </Routes>
           </div>
         </main>
-
-        <footer className="app-footer">
-          <span>TaskFlow · Minimal Task Manager</span>
-        </footer>
       </div>
     </BrowserRouter>
   );
